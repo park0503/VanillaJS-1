@@ -1,8 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #2f3542;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
 }
 h1 {
   color: white;
+  font-size: 80px;
+  margin-bottom: 10px;
 }
 
 .hiding {
@@ -32,6 +45,50 @@ h1 {
   animation: fadeIn 0.5s linear;
 }
 
-.js-weather {
+.weather {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #020202;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 10px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+}
+
+.toDoList,
+.greeting {
+  background-color: rgba(255, 255, 255, 0.2);
   color: white;
+  padding: 2px 2px;
+  border-radius: 5px;
+  list-style: none;
+}
+
+.toDoList li {
+  margin: 2px;
+}
+
+.toDoList button {
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+#resetBtn {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 10px;
+  padding: 5px 5px;
+  color: coral;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

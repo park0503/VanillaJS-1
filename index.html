@@ -4,6 +4,10 @@
       <meta charset="UTF-8" />
       <title>Something</title>
       <link rel="stylesheet" href="index.css" />
+      <script
+        src="https://kit.fontawesome.com/4891fd3790.js"
+        crossorigin="anonymous"
+      ></script>
     </head>
 
     <body>
@@ -11,20 +15,26 @@
         <h1>00:00</h1>
       </div>
 
-      <form class="form">
-        <input type="text" placeholder="What is your name?" />
-      </form>
-      <h4 class="greeting"></h4>
+      <div class="content">
+        <form class="form">
+          <input type="text" placeholder="What is your name?" />
+        </form>
+        <h4 class="greeting"></h4>
 
-      <form class="js-toDoForm">
-        <input type="text" placeholder="Write what you want to do!" />
-      </form>
-      <ul class="toDoList"></ul>
+        <form class="js-toDoForm">
+          <input type="text" placeholder="Write what you want to do!" />
+        </form>
+        <ul class="toDoList"></ul>
+      </div>
 
-      <button onclick="resetLS()" id="resetBtn">reset</button>
+      <button onclick="resetLS()" id="resetBtn">
+        <i class="fas fa-power-off"></i>
+      </button>
       <br />
 
-      <span class="js-weather"></span>
+      <div class="weather">
+        <span class="js-weather"></span>
+      </div>
 
       <script src="clock.js"></script>
       <script src="greeting.js"></script>

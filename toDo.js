@@ -21,7 +21,8 @@ function paintToDo(text) {
   const span = document.createElement("span");
   const delBtn = document.createElement("button");
   const newId = toDos.length + 1;
-  delBtn.innerText = "X";
+  delBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
+  const i = delBtn.querySelector("i");
   delBtn.addEventListener("click", deleteToDo);
   span.innerText = text;
   li.appendChild(span);
@@ -37,7 +38,10 @@ function paintToDo(text) {
 }
 
 function deleteToDo(event) {
-  const btn = event.target;
+  let btn = event.target;
+  if (btn.querySelector("i") === null) {
+    btn = btn.parentNode;
+  }
   const li = btn.parentNode;
   console.log(li.id);
   toDoList.removeChild(li);
